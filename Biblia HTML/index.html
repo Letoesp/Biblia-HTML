@@ -1,0 +1,358 @@
+<!--Este es un comentario-->
+<!DOCTYPE html><!--Tipo de documento-->
+<html><!--En esta etiqueta va todo el contenido del código-->
+    <head><!--Acá van metadatos de nuestra web-->
+        <title>Primera web Leto</title><!--Titulo de nuestra web-->
+        <style>
+            body{background-color: palevioletred;}
+            h1{color:yellow;}
+            p{color:white;}
+            table, th, td{
+                border: 1px solid black;
+            }
+            th, td {
+                background-color: rgb(116, 116, 208);
+                padding: 10px;
+            }
+            table{
+                border-spacing: 10px;
+            }
+            tr:nth-child(even){
+                background-color: green;
+            }
+            tr:nth-child(odd){
+                background-color: yellow;
+            }
+            .navegador{
+                background-color: aquamarine;
+                border: 20px solid blue;
+
+            }
+            .red{
+                background-color: green;
+                border: 20px solid green;
+            }
+            #youtube{
+                background-color: red;
+                border: 20px solid red;
+            }
+
+        </style><!--Esto se verá más en CSS pero igual se verá, darle colores al fondo de la página, headings, parrafos, tablas-->
+        <!--también para cambiar de forma más personalizada las tablas, etc-->
+        <!--Se definen las clases y luego se asignan a los elementos (como en java)-->
+        <!--Se definen los id para despues usarlos-->
+        <meta charset="UTF-8"><!--Definir grupo de carácteres, como las tildes, etc-->
+        <link rel="icon" type="image/png" href="HTML5.png"><!--Favicon para la página web, es el icono de nuestra pagweb-->
+        <meta name = "keywords" content = "HTML, web"><!--Definir keywords para que aparezcan en busquedas-->
+        <meta name = "description" content = "Creación de página web"><!--Definir descripción para que aparezcan en busquedas-->
+        <meta name = "author" content = "Leonardo Espinoza"><!--Definir autor busquedas-->
+        <meta name = "viewport" content = "width =device-width, initial -scale1.0"><!--Define como se ve la página según el dispositivo de entrada-->
+
+    </head>
+    <body><!--Parte visible de la web-->
+        <h1 style="font-size:50px;">Hola mundo</h1><!--Titulo de la página con un atributo de su tamaño de 50px -->
+        <h2>Segundo título</h2>
+        <h3>Tercer título</h3>
+        <h4>Cuarto título</h4>
+        <h5>Quinto título</h5>
+        <h6>Sexto título</h6><!--Títulos desde el 1 hasta el 6, van disminuyendo de tamaño de forma predeterminada-->
+        <p style="color:red">Creando <br>página</br> web con html</p><!--Párrafo con estilo, lo de estilo se ve más en css-->
+        <!--br es para saltos de linea de una palabra-->
+        <pre><!--Párrafo con saltos de linea tal como sale escrito-->
+            Hola
+            como
+            estas
+        </pre>
+        <hr><!--Crea una línea horizontal-->
+        <a href="http://www.google.com">Acceder a Google</a><!--Agregar links a nuestra página web-->
+        <a href="http://www.google.com" target="_blank">Acceder a  Google en nueva pestaña</a><!--Link en nueva pestaña-->
+        <a href="pagina.html">Acceso a página secundaria</a><!--Esto permite navegar por la web y acceder a más páginas-->
+        <img src="https://www.diariodesevilla.es/2023/03/05/mascotas/curiosidades-gatos-naranja-unicos-especie_1771932936_178438161_667x375.png" alt="Gato" width="500px" height="300px"><!--Puedes subir imagenes desde el directorio o adjuntando link externo del navegador, también cambiar su tamaño-->
+        <!--alt es texto alternativo por si la imagen no carga-->
+        <a href="http:/www.youtube.com" target="_blank"><!--Para adjuntar links al seleccionar una imagen-->
+            <img src="https://cdn.pixabay.com/photo/2021/12/10/16/38/twitch-6860918_960_720.png" width="500px">
+        </a>
+        <!--Formatos de texto-->
+        <p>Texto normal</p>
+        <p>Texto en <b>negrita</b></p>
+        <p>Texto <strong>importante</strong></p>
+        <p>Texto en <i>cursiva</i></p>
+        <p>Texto <em>enfatizado</em></p>
+        <p>Texto <mark>marcado</mark></p>
+        <p>Texto <small>pequeño</small></p>
+        <p>Texto <del>tachado</del></p>
+        <p>Texto <ins>subrayado</ins></p>
+        <p>Texto <sub>subindice</sub> y <sup>superindice</sup></p>
+        <!--Caracteres, símbolos y emotes-->
+        <p>Símbolo de euro : &euro;</p>
+        <p>Símbolo de euro mediante valor decimal : &#8364;</p>
+        <p>Símbolo de euro mediante valor hexadecimal : &#x20AC;</p>
+        <p>si&#769;mbolo</p><!--Para tildes en caso de no estar definido el uft en head-->
+        <p>Símbolo menor que : &lt; &#60;</p>
+        <p>Símbolo mayor que : &gt; &#62;</p>
+        <p>Número pi : &pi; &#960; &#x03C0; </p>
+        <p>Número psi : &psi;</p>
+        <p>Símbolo corazón : &hearts;</p>
+        <!--para emoticonos es importante tener el uft-8-->
+        <p>&#128077; &#x1F44D;</p><!--Pulgares arriba-->
+        <p>&#128526; &#x1F60E;</p><!--Carita con lentes-->
+        <!--Citas y abreviaciones-->
+        <p>De acuerdo con Wikipedia:</p>
+        <blockquote cite="http://www.wikipedia.com">
+            Este texto es una cita larga.
+        </blockquote>
+        <p>Como dijo Einstein: <q>Esta es una cita corta</q></p>
+        <p><cite>El código Da Vinci</cite>es una novela escrita por Dan Brown</p><!--Citas para peliculas, libros,etc-->
+        <p>Estamos programando con <abbr title="HyperText Markup Language">HTML</abbr>.</p><!--Abreviaciones-->
+        <!--tablas-->
+        <table  style="width:100%;">
+            <colgroup><!--esto es para modificar colores de columnas contando las columnas-->
+                <col span="2" style="background-color: blue;">
+            </colgroup>
+            <tr style="height:40px"><!--elemento de la tabla-->
+                <th style="width:45%;" colspan="2">Nombre</th><!--Título de la tabla, colspan es para combinar celdas-->
+                <th style="width:100%;">Nota</th>
+            <tr>
+                <td rowspan="3">Juan</td><!--Dato de la tabla, rowspan es para darle más espacios de filas-->
+                <td rowspan="3">Pérez</td>
+                <td>7.0</td>
+                
+            </tr>
+            <tr>
+                <td>6.5</td>
+            </tr>
+            <tr>
+                <td>5.5</td>
+            </tr>
+
+            <tr>
+                <td rowspan="3">Laura</td>
+                <td rowspan="3">González</td>
+                <td>6.5</td>
+            </tr>
+            <tr>
+                <td>5.6</td>
+            </tr>
+            <tr>
+                <td>4.5</td>
+            </tr>
+            <caption>Notas de los alumnos</caption><!--Descripción de la tabla-->
+
+
+            </tr>
+        </table>
+        <!--Listas-->
+        <p>Redes sociales</p>
+        <ul style="list-style-type: circle;"><!--Lista sin orden-->
+            <li>Twitter</li>
+            <li>Instagram</li>
+            <li>Youtube
+                <ul style="list-style-type: armenian;">
+                    <li>Canal principal</li>
+                    <li>Canal secundario</li>
+                </ul>
+            </li>
+            <li>Facebook</li>
+        </ul>
+        <p>Lenguajes</p>
+        <ol type="1"><!--Lista en orden, el tipo es para como ordenarlos-->
+            <li>HTML</li>
+            <ol>
+                <li>Elementos básicos</li>
+                <li>Tablas</li>
+                <li>Listas</li>
+            </ol>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ol>
+        <p>Lenguajes</p>
+        <dl><!--Lista de descripción-->
+            <dt>HTML</dt>
+            <dd>Estructura</dd>
+            <dt>CSS</dt>
+            <dd>Diseño</dd>
+            <dt>JavaScript</dt>
+            <dd>Interactividad</dd>
+
+        </dl>
+        <!--Videos-->
+        <h1>Vídeos</h1>
+        <video width="540" height="360" controls><!--controls es para agregar controles al video, autoplay muted es para ponerlo de forma automatica silenciado-->
+            <source src="Luciokill.mp4" type="video/mp4"><!--Nombre del archivo-->
+        </video>
+        <h2>Audios</h2><!--Similar a videos-->
+        <audio controls>
+            <source src="Audio.mp3" type="audio/mpeg">
+        </audio>
+        <!--Block e inline-->
+        <!--algunos elementos siguen en la misma linea cuando los declaras y otros tienen su salto de línea-->
+        <p>Este texto es <span style="color:red">rojo</span> y este <span style="color:blue">azul</span></p><!--determinar estilo de una palabra en concreto-->
+        <div style="background-color: yellow; color:purple;"><!--con div lo que está dentro del div se especifica el color, etc. Agrupar elementos-->
+            <h1>Heading</h1>
+            <p>Esto es un parrafo</p>
+        </div>
+        <!--Clases e identificadores-->
+        <!--en head se determina el estilo de una clase y sus características para luego aplicarlas a los elementos-->
+        <div class="navegador" id="chrome">
+            <h1>Google</h1>
+            <p>Google es un navegador</p>
+        </div>
+        <div class="red" id="twitter">
+            <h1>Twitter</h1>
+            <p>Twitter es una red social</p>
+        </div>
+        <div class="navegador" id="firefox">
+            <h1>Mozilla</h1>
+            <p>Mozilla es un navegador</p>
+        </div>
+        <div class="red" id="instagram">
+            <h1>Instagram</h1>
+            <p>Instagram es una red social</p>
+        </div>
+        <!--Identificador es para un unico elemento-->
+        <div id="youtube">
+            <h1>Youtube</h1>
+            <p>Youtube es un reproductor</p>
+        </div>
+        <!--Marcadores-->
+        <!--Te lleva a la parte de la página donde está el id, para navegar por la página-->
+        <nav>
+        <a href="#chrome">Google Chrome</a>
+        <a href="#twitter">Twitter</a>
+        <a href="#firefox">Mozilla Firefox</a>
+        <a href="#instagram">Instagram</a>
+        <a href="#youtube">Youtube</a>
+        </nav>
+        <!--Elementos semanticos-->
+        <!-- El orden suele ser: Header en cabeza, nav, section y article, a la derecha aside y al final footer-->
+        <!--header para parte superior de la web-->
+        <!--nav para links de navegacion-->
+        <!--section para secciones-->
+        <!--article para articulos-->
+        <!--aside para información lateral de web-->
+        <!--footer para abajo de la página-->
+        <!--para darle más orden y navegar mejor por el código-->
+        <footer>
+            <p>leonardo.espinoza@gmail.com</p>
+        </footer>
+        <!--Formularios-->
+        <form>
+            <label for="nombre">Nombre:</label><br><!--el for es para enviarte al cuadro de texto por el id-->
+            <input type="text" id="nombre" name="nombre"><br><!--en input se define lo que se pide al usuario-->
+            <label for="apellido">Apellido:</label><br>
+            <input type="text" id="apellido" name="apellido"><br><!--en input se define lo que se pide al usuario-->
+            <input type="submit" value="Enviar"><!--El tipo submit es para enviar los datos-->
+        </form>
+        <!--Tipos de entradas-->
+        <!--atributos de formularios, action para especificar a donde se envia la informacion--><!--target especifica que hacer cuando apretas enviar-->
+        <form action="envio.php" target="_blank" method="post" autocomplete="on"><!--get para obtener info, post para que los datos se oculten,autocomplete recuerda los datos-->
+
+            <fieldset><!--Para agrupar elementos-->
+                <legend>Datos de usuario</legend><!--Especificar lo que se muestra-->
+                <!--TEXTO-->
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" size="10px" placeholder="Introduce tu nombre" autofocus required><br><!--autofocus es para posicionar el cursor-->
+                <!--placeholder: deja un mensaje en blanco en los cuadros de texto -->
+                <label for="nombre">Apellido:</label><br>
+                <input type="text" id="apellido" name="apellido" placeholder="Introduce tu apellido" required><br>
+                <!--required es campo requerido/obligatorio-->
+
+                <!--PASSWORD-->
+                <label for="contrasena">Contraseña:</label><br><!--con este tipo no se ve lo que escribes en la web-->
+                <input type="password" id="contrasena" name="contrasena" maxlength="4"><br><!-- maxlenght define la cantidad maxima de carácteres-->
+                
+                <!--EMAIL-->
+                <label for="correo">Email:</label>
+                <input type="email" id="correo" name="correo" size="30px"><br><br><!--pide arrobas-->
+
+                <label for="rol">Rol:</label><br>
+                <input type="text" id="rol" name="rol" value="Estudiante" readonly><br><!--readonly solo permite leer y no modificar la celda-->
+
+                <label for="rol2">Rol 2:</label><br>
+                <input type="text" id="rol2" name="rol2" value="Estudiante" disabled><br><!--Disabled desactiva la celda-->
+
+
+            </fieldset>
+
+
+            <!--HIDDEN-->
+            <input type="hidden" id="estudiante" name="estudiante" value="1"><!--no aparece en la web-->
+
+            <!--RADIOBUTTON--><!--Nos permite realizar una sola elección-->
+            <label> Lenguaje favorito</label><br>
+            <input type="radio" id="html" name="favorito" value="HTML">
+            <label for="html">HTML</label><br>
+            <input type="radio" id="css" name="favorito" value="CSS">
+            <label for="css">CSS</label><br>
+            <input type="radio" id="javascript" name="favorito" value="JavaScript">
+            <label for="javascript">JavaScript</label><br>
+
+            <!--CHECKBOX--><!--Nos permite realizar varias elecciones o ninguna-->
+            <label> Lenguaje que conoces</label><br>
+            <input type="checkbox" id="html" name="favorito" value="HTML">
+            <label for="html">HTML</label><br>
+            <input type="checkbox" id="css" name="favorito" value="CSS">
+            <label for="css">CSS</label><br>
+            <input type="checkbox" id="javascript" name="favorito" value="JavaScript">
+            <label for="javascript">JavaScript</label><br>
+
+            <!--COLOR--><!--Nos permite seleccionar un color-->
+            <label for="color">Selecciona un color:</label>
+            <input type="color" id="color" name="color"><br><br>
+
+            <!--DATE--><!--Nos permite seleccionar una fecha-->
+            <label for="nacimiento">Selecciona tu fecha de nacimiento:</label>
+            <input type="date" id="nacimiento" name="nacimiento"><br>
+
+            <!--DATETIME--><!--Nos permite seleccionar una hora y fecha-->
+            <label for="nacimiento2">Selecciona tu fecha y hora de nacimiento:</label>
+            <input type="time" id="hora" name="hora"><br><br>
+
+            <!--TIME--><!--Nos permite seleccionar una hora-->
+            <label for="hora">Selecciona una hora:</label>
+            <input type="time" id="hora" name="hora"> <br><br>
+
+            <!-- NUMBER--><!--Nos permite escribir un número-->
+            <label for="edad"> Introduce tu edad:</label>
+            <input type="number" id="edad" name="edad" step="1" min="0" max="99"><br><!--step permite introducir valores validos (por ejemplo no permitir decimales si introducimos 1)-->
+
+            <!--RANGE--><!--Nos permite un rango-->
+            <label for="valoracion">Valora el curso:</label>
+            <input type="range" id="valoracion" name="valoracion"><br><br>
+
+            <!--FILE--><!--Nos permite subir un archivo-->
+            <label for="archivo">Selecciona una foto de perfil:</label>
+            <input type="file" id="archivo" name="archivo" multiple><br><br><!--multiple permite seleecionar más de un archivo-->
+
+            <!--BOTONES--><!--Botones con funciones-->
+            <label>Botones:</label>
+            <input type="button" onclick="alert('Mensaje de alerta')" value="Alerta">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Reiniciar"><br>
+
+            <!--Lista de selección--><!-- para seleccionar en un menú despegable-->
+            <label>Lenguajes</label>
+            <select id="lenguajes2" name="lenguajes2">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript">JavaScript</option>
+                <option value="java">Java</option>
+                <option value="python">Python</option>
+            </select>
+            
+            <!--Datalist--><!--Aparecen las coincidencias-->
+            <input list="lenguajes3" name="lenguajes3">
+            <datalist id="lenguajes3">
+                <option value="HTML"></option>
+                <option value="CSS"></option>
+                <option value="JavaScript"></option>
+                <option value="Java"></option>
+                <option value="Python"></option>
+            </datalist>
+
+
+
+
+        </form>
+    </body>
+</html>
